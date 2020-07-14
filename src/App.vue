@@ -1,9 +1,8 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <ExtraInfo titulo="Installed CLI Plugins" v-bind:enlaces="enlaces_cli_plugins" />
-    <ExtraInfo titulo="Essential Links" v-bind:enlaces="enlaces_essential_links" />
-    <ExtraInfo titulo="Ecosystem" v-bind:enlaces="enlaces_ecosystem" />
+    <Milista titulo="Museos visitados" :enlaces="enlaces__realizado" />
+    <Milista titulo="Museos por visitar" :enlaces="enlaces_por_hacer" />
     <br> <br> <br>
   </div>
 </template>
@@ -20,15 +19,15 @@ export default {
     return {
       // acá están mis datos
       enlaces__realizado: [
-        {texto: 'babel', url: 'https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel'},
-        {texto: 'eslint', url: 'https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint'}
+        {url: "https://www.paris.es/museo-louvre",texto:"Louvre"},
+        {url: "https://www.museumsportal-berlin.de/es/museos/pergamonmuseum/", texto:"Pergamo"},
+        {url: "https://www.mim.cl/", texto:"MIM"},
       ],
       enlaces_por_hacer: [
-        {url: "https://vuejs.org", texto: 'Core Docs'},
-        {url: "https://forum.vuejs.org", texto: 'Forum'},
-        {url: "https://chat.vuejs.org", texto: 'Community Chat'},
-        {url: "https://twitter.com/vuejs", texto: 'Twitter'},
-        {url: "https://news.vuejs.org", texto: 'News'}
+        {url: "https://www.metmuseum.org/", texto: "Metropolitan Museum of Art"},
+        {url: "http://www.san-petersburgo.com/hermitage.htm", texto: "Hermitage"},
+        {url: "https://www.khm.at/", texto: "Kunsthistorisches"},
+        {url: "https://www.egipto.net/museo-egipcio-el-cairo", texto: "Egipcio del Cairo"}
       ],
     }
   }
